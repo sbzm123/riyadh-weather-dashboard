@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <title>weather-dashboard</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <script src="js/app.js"></script>
+    <div class="container">
+        <div class="Temperature section">
+            <h2>Temperature: <span class="text" id="temp"></span></h2>
+            <div class="loading">Loading...</div>  
+        </div>
+        <div id="weather" class="weather section">
+            <div class="weather-description">
+                <h3>Weather: <span id="weather-desc"></span></h3>
+                <div class="loading">Loading...</div>
+            </div>
+            <div id="weather-icon-div" class="weather-icon">
+                <img id="weather-icon" src="" alt="Weather Icon" />
+            </div>
+        </div>
+        <div class="humidity section">
+            <h3>Humidity: <span class="text" id="humidity"></span></h3>
+            <div class="loading">Loading...</div>
+        </div>
+        <div class="rain-chance section">
+            <h3>Rain Chance: <span class="text" id="rain-chance"></span></h3>
+            <div class="loading">Loading...</div>
+        </div>
+        <div class="wind-direction section">
+            <h3>Wind Direction: <span class="text" id="wind-dir"></span></h3>
+            <div class="loading">Loading...</div>
+        </div>
+    </div>
+    <audio id="rain-sound" src="assets/sounds/rain.wav" loop preload="auto"></audio>
+    <div class="rain-container" id="rain-container"></div>
+</body>
+
+</html>

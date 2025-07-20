@@ -1,0 +1,144 @@
+@media (max-width: 600px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+body.morning {
+    background: linear-gradient(to bottom, #FFEBCD, #BEE3F8);
+}
+
+body.afternoon {
+    background: linear-gradient(to bottom, #87CEFA, #00BFFF);
+}
+
+body.evening {
+    background: linear-gradient(to bottom, #F3904F, #3B4371);
+}
+
+body.night {
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+}
+
+.container {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.Temperature {
+    background: #FFCC80;
+    width: 46%;
+    height: 50px;
+}
+
+.weather {
+    background: #FFF176;
+    width: 47%;
+    height: 50%;
+    right: 0;
+    position: inherit;
+}
+
+
+.humidity {
+    background: #B2EBF2;
+    width: 30%;
+}
+
+.rain-chance {
+    background: #81D4FA;
+    width: 30%
+}
+
+.wind-direction {
+    background: #E1BEE7;
+    width: 30%;
+}
+
+.container>* {
+    font-size: 1.5rem;
+    margin: 10px;
+    padding: 20px;
+}
+
+#weather-icon {
+    width: 50px;
+    height: 50px;
+    margin: 10px auto;
+    padding: 10px;
+    display: block;
+    background-color: white;
+    border-radius: 50%;
+}
+
+.section {
+    border-radius: 10px;
+    text-align: center;
+    color: #333;
+    /* border: #00BFFF 10px solid; */
+    padding: 20px;
+    box-shadow: 2px 4px 10px rgba(0, 0, 0, 0.2);
+    height: 40%;
+    transition: background-color 0.3s ease;
+
+}
+
+.section:hover {
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+.rain-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.raindrop {
+    position: absolute;
+    width: 2px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    animation: fall 1s linear infinite;
+}
+
+@keyframes fall {
+    0% {
+        top: -10px;
+    }
+
+    100% {
+        top: 100%;
+    }
+}
+.text {
+    font-weight: bold;
+    color: #333;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding-top: 135px;
+}
